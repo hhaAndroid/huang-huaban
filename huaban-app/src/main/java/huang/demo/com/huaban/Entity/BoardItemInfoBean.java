@@ -29,6 +29,7 @@ public class BoardItemInfoBean {
     private String description;
     private List<String> recommend_tags;
 
+    //
     public int getBoard_id() {
         return board_id;
     }
