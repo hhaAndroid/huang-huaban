@@ -1,0 +1,14 @@
+<resources>
+    <style name="Theme.DesignDemo" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!--下面的属性可以使得状态栏透明，实现全屏，非常有用，一般都会设置-->
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="Theme.PictureTheme" parent="AppTheme">
+        <item name="colorPrimaryDark">@color/pictureprimary_dark</item>
+    </style>
+</resources>

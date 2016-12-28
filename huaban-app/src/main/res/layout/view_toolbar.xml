@@ -1,0 +1,28 @@
+
+<!--AppBarLayout是一个bar的容器，放入其中的bar可以作为一个整体进行管理
+ 一个消失，那就都会消失，支持手势滑动，用AppBarLayout包裹的子view会以一个整体的形式作为AppBar
+ AppBarLayout是支持手势滑动效果的，不过的跟CoordinatorLayout配合使用
+ -->
+<!--elevation：设置该组件“浮”起来的高度 新的属性
+popupTheme属性用于设置当点击了菜单按钮，弹出的样式-->
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    android:id="@+id/app_bar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:elevation="3dp">
+    <!--普通的toolbar  colorPrimary就是toolbar的颜色，在style已经设置了
+    当你想让toolbar代替actionbar功能时候，需要设置下面的theme样式-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_scrollFlags="scroll|enterAlways"/>
+<!--scroll: 所有想滚动出屏幕的view都需要设置这个flag
+enterAlways: 这个flag让任意向下的滚动都会导致该view变为可见，启用快速“返回模式”
+而且上述写法是固定的，都是这样写-->
+</android.support.design.widget.AppBarLayout>
